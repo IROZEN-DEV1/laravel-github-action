@@ -16,6 +16,6 @@ jobs:
        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
        with:
          server: ftp.netelmart.net
-         username: dev@dev.netelmart.net
-         password: ${{ secrets.ftp_password }}
-         server-dir: dev2.netelmart.net
+         username: dev2@dev2.netelmart.net
+         password: ${{ secrets.FTP_PASSWORD_DEV2 }}
+         server-dir: dev2.netelmart.net/
