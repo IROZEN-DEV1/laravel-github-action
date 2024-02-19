@@ -15,6 +15,10 @@ jobs:
      - name: Install composer Dependencies
        run: composer update -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
+    - name: copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+
      - name: Sync files
        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
        with:
