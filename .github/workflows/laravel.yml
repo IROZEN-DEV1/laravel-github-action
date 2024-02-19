@@ -19,7 +19,7 @@ jobs:
        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
      - name: Generate App Key
-       run: php artisan generate:key
+       run: php artisan key:generate
       
 
      - name: Sync files
