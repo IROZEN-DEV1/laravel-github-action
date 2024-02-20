@@ -17,7 +17,14 @@ jobs:
 
      - name: copy .env
        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    #  - name: Generate App Key
+    #    run: php artisan key:generate
 
+    #  - name: Config Clearing
+    #    run: php artisan config:clear
+
+    #  - name: Cache Clearing
+    #    run: php artisan cache:clear
 
      - name: Setup PHP with PECL extension
        uses: shivammathur/setup-php@v2
